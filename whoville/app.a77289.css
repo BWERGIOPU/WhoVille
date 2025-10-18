@@ -1,3 +1,26 @@
+/* Christmas Color Palette */
+:root {
+  --christmas-green: #54BD81;
+  --christmas-red: #F04545;
+  --christmas-gold: #FEC974;
+  --primary-blue: #54BD81;
+  --secondary-blue: #54BD81;
+  --primary-color: #54BD81;
+  --secondary-color: #F04545;
+  --accent-color: #FEC974;
+  --gray600: #4b5563;
+  --gray700: #374151;
+  --gray300: #d1d5db;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+  --gray800: #1f2937;
+  --white: #ffffff;
+  --form-border: #d1d5db;
+  --text-dark: #2d5940;
+  --bg-light: #f8fdf9;
+  --bg-cream: #fffef5;
+}
+
 .carousel {
   box-sizing: border-box;
   position: relative;

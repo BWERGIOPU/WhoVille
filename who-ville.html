@@ -3,6 +3,196 @@
 <html class="" lang="en-US" prefix="og: https://ogp.me/ns#" data-gs-exp="off">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Christmas Color Palette -->
+    <style>
+      :root {
+        --christmas-green: #54BD81;
+        --christmas-red: #F04545;
+        --christmas-gold: #FEC974;
+        --primary-color: #54BD81;
+        --secondary-color: #F04545;
+        --accent-color: #FEC974;
+        --text-dark: #2d5940;
+        --text-light: #ffffff;
+        --bg-light: #f8fdf9;
+        --bg-cream: #fffef5;
+      }
+      
+      /* Apply Christmas colors to buttons and links with glows */
+      /* Make all buttons rounded with white text */
+      .btn, .btn--gold, .btn--secondary, .btn--base, 
+      button, input[type="submit"], .uui-button, .w-button {
+        border-radius: 50px !important;
+        color: #ffffff !important;
+      }
+      
+      .btn--gold {
+        background-color: #54BD81 !important;
+        border-color: #54BD81 !important;
+        color: #ffffff !important;
+        border-radius: 50px !important;
+        box-shadow: 0 0 20px rgba(84, 189, 129, 0.5), 0 0 40px rgba(84, 189, 129, 0.3) !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .btn--gold:hover {
+        background-color: #F04545 !important;
+        border-color: #F04545 !important;
+        color: #ffffff !important;
+        box-shadow: 0 0 25px rgba(240, 69, 69, 0.6), 0 0 50px rgba(240, 69, 69, 0.4), 0 0 75px rgba(240, 69, 69, 0.2) !important;
+        transform: translateY(-2px) !important;
+      }
+      
+      .btn--secondary {
+        background-color: #54BD81 !important;
+        border-color: #54BD81 !important;
+        color: #ffffff !important;
+        border-radius: 50px !important;
+        box-shadow: 0 0 20px rgba(84, 189, 129, 0.5), 0 0 40px rgba(84, 189, 129, 0.3) !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      .btn--secondary:hover {
+        background-color: #F04545 !important;
+        border-color: #F04545 !important;
+        color: #ffffff !important;
+        box-shadow: 0 0 25px rgba(240, 69, 69, 0.6), 0 0 50px rgba(240, 69, 69, 0.4), 0 0 75px rgba(240, 69, 69, 0.2) !important;
+        transform: translateY(-2px) !important;
+      }
+      
+      /* Update link colors with subtle glow */
+      a:not(.btn):not(.btn--gold):not(.btn--secondary):not(.btn--base) {
+        color: #54BD81;
+        transition: all 0.3s ease;
+      }
+      
+      a:not(.btn):not(.btn--gold):not(.btn--secondary):not(.btn--base):hover {
+        color: #F04545;
+        text-shadow: 0 0 10px rgba(240, 69, 69, 0.5);
+      }
+      
+      /* Force white text on all button links */
+      a.btn, a.btn--gold, a.btn--secondary, a.btn--base,
+      .btn, .btn--gold, .btn--secondary, .btn--base {
+        color: #ffffff !important;
+      }
+      
+      a.btn:hover, a.btn--gold:hover, a.btn--secondary:hover, a.btn--base:hover {
+        color: #ffffff !important;
+      }
+      
+      /* Add glow to headings */
+      h1, h2, h3 {
+        text-shadow: 0 0 15px rgba(84, 189, 129, 0.3);
+      }
+      
+      /* Contact form glow */
+      #contact-us {
+        box-shadow: 0 0 30px rgba(84, 189, 129, 0.3), 0 0 60px rgba(240, 69, 69, 0.2), 0 10px 50px rgba(0, 0, 0, 0.1) !important;
+      }
+      
+      /* Input field glow on focus */
+      .field-input:focus {
+        box-shadow: 0 0 15px rgba(84, 189, 129, 0.5), 0 0 30px rgba(84, 189, 129, 0.3) !important;
+        border-color: #54BD81 !important;
+      }
+      
+      /* Image glow effect */
+      img:hover {
+        filter: drop-shadow(0 0 20px rgba(240, 69, 69, 0.7));
+        transition: filter 0.3s ease;
+      }
+      
+      /* Card/section glow */
+      .module, .section {
+        transition: box-shadow 0.3s ease;
+      }
+      
+      .module:hover, .section:hover {
+        box-shadow: 0 0 25px rgba(84, 189, 129, 0.2) !important;
+      }
+      
+      /* Footer white background with dark navy text */
+      footer {
+        background-color: #ffffff !important;
+        color: #23384E !important;
+      }
+      
+      footer * {
+        color: #23384E !important;
+      }
+      
+      footer a {
+        color: #23384E !important;
+      }
+      
+      footer a:hover {
+        color: #54BD81 !important;
+      }
+      
+      /* Section backgrounds - change from dark to white */
+      .beige-bg, .transparent-bg {
+        background-color: #ffffff !important;
+      }
+      
+      /* Update all text in sections to use dark navy */
+      .beige-bg, .transparent-bg {
+        color: #23384E !important;
+      }
+      
+      .beige-bg p, .transparent-bg p,
+      .beige-bg h1, .transparent-bg h1,
+      .beige-bg h2, .transparent-bg h2,
+      .beige-bg h3, .transparent-bg h3,
+      .beige-bg h4, .transparent-bg h4,
+      .beige-bg h5, .transparent-bg h5,
+      .beige-bg h6, .transparent-bg h6,
+      .beige-bg div, .transparent-bg div,
+      .beige-bg li, .transparent-bg li,
+      .beige-bg a:not(.btn):not(.btn--gold):not(.btn--secondary):not(.btn--base), 
+      .transparent-bg a:not(.btn):not(.btn--gold):not(.btn--secondary):not(.btn--base) {
+        color: #23384E !important;
+      }
+      
+      /* Force white text on button links - must come after other rules */
+      .beige-bg a.btn, .transparent-bg a.btn,
+      .beige-bg a.btn--gold, .transparent-bg a.btn--gold,
+      .beige-bg a.btn--secondary, .transparent-bg a.btn--secondary,
+      .beige-bg a.btn--base, .transparent-bg a.btn--base,
+      a.btn, a.btn--gold, a.btn--secondary, a.btn--base {
+        color: #ffffff !important;
+      }
+      
+      /* Preserve inline styled elements (highlighted words) - more specific selector */
+      .beige-bg h1 span[style*="color"],
+      .transparent-bg h1 span[style*="color"],
+      .beige-bg p span[style*="color"],
+      .transparent-bg p span[style*="color"],
+      .beige-bg span[style*="color"],
+      .transparent-bg span[style*="color"] {
+        /* Remove the color override to let inline styles work */
+        color: inherit;
+      }
+      
+      /* Explicitly set the Christmas colors for highlighted spans */
+      .beige-bg span[style*="color: #F04545"],
+      .transparent-bg span[style*="color: #F04545"],
+      .beige-bg span[style*="color:#F04545"],
+      .transparent-bg span[style*="color:#F04545"] {
+        color: #F04545 !important;
+        text-shadow: 0 0 20px rgba(240, 69, 69, 0.6) !important;
+      }
+      
+      .beige-bg span[style*="color: #54BD81"],
+      .transparent-bg span[style*="color: #54BD81"],
+      .beige-bg span[style*="color:#54BD81"],
+      .transparent-bg span[style*="color:#54BD81"] {
+        color: #54BD81 !important;
+        text-shadow: 0 0 20px rgba(84, 189, 129, 0.6) !important;
+      }
+    </style>
+    
     <style>
       body {
         transition: opacity ease-in 0.2s;
@@ -754,12 +944,12 @@
 
       #nsl-notices-fallback>div.error {
         display: block;
-        border-left-color: #dc3232;
+        border-left-color: #F04545;
       }
 
       #nsl-notices-fallback>div.updated {
         display: block;
-        border-left-color: #46b450;
+        border-left-color: #54BD81;
       }
 
       #nsl-notices-fallback p {
@@ -1378,13 +1568,13 @@
                       <div>
                         <div class="b-hero-header__content cm checked-list-wrap ">
                           <p class="text-label">CHRISTMAS LIGHT INSTALLERS</p>
-                          <h1>#1 TRUSTED CHRISTMAS LIGHT INSTALLATIONS In Fresno & Clovis, Ca</h1>
-                          <p>Transform your property into a timeless holiday experience with our simple or full-service, high-end light leasing options.</p>
+                          <h1>#1 TRUSTED <span style="color: #F04545; text-shadow: 0 0 20px rgba(240, 69, 69, 0.6);">CHRISTMAS</span> LIGHT INSTALLATIONS In <span style="color: #54BD81; text-shadow: 0 0 20px rgba(84, 189, 129, 0.6);">Fresno & Clovis</span>, Ca</h1>
+                          <p>Transform your property into a <span style="color: #F04545; font-weight: 600;">timeless holiday experience</span> with our simple or full-service, <span style="color: #54BD81; font-weight: 600;">high-end light leasing</span> options.</p>
                         </div>
                         <div class="mt-8 md:mt-10 tablet:flex tablet:justify-center">
                           <ul class="p-button-group m-0 gap-4 md:flex md:items-center">
                             <li class="mdd:my-4 text-center">
-                              <a href="https://www.luxurypresence.com/get-started/" class="btn btn--normal btn--gold btn--base"> Book Online </a>
+                              <a href="https://www.luxurypresence.com/get-started/" class="btn btn--normal btn--gold btn--base !text-white"> Book Online </a>
                             </li>
                           </ul>
                         </div>
@@ -2162,7 +2352,7 @@
                         </div>
                       </div>
                       <div class="flex justify-center mt-6">
-                        <input type="submit" data-wait="Please wait..." class="uui-button is-button-large w-button" style="background-color: #E26920;" value="Get My Personalized Quote" />
+                        <input type="submit" data-wait="Please wait..." class="uui-button is-button-large w-button" style="background-color: #F04545; border-color: #F04545;" value="Get My Personalized Quote" />
                       </div>
                     </form>
                     <div class="w-form-done">
