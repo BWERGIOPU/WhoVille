@@ -225,30 +225,44 @@
         text-shadow: 0 0 15px rgba(84, 189, 129, 0.3);
       }
       
-      /* Contact form glow */
+      /* Contact form - remove glow */
       #contact-us {
-        box-shadow: 0 0 30px rgba(84, 189, 129, 0.3), 0 0 60px rgba(240, 69, 69, 0.2), 0 10px 50px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: none !important;
+        background: linear-gradient(135deg, rgba(84, 189, 129, 0.05) 0%, rgba(240, 69, 69, 0.05) 100%) !important;
+        border: 2px solid rgba(84, 189, 129, 0.2) !important;
+        border-radius: 20px !important;
       }
       
-      /* Input field glow on focus */
-      .field-input:focus {
-        box-shadow: 0 0 15px rgba(84, 189, 129, 0.5), 0 0 30px rgba(84, 189, 129, 0.3) !important;
+      /* Input fields rounded and styled */
+      .field-input, .field-input.w-input {
+        border-radius: 15px !important;
+        border: 2px solid rgba(84, 189, 129, 0.3) !important;
+        padding: 14px 20px !important;
+        background-color: #ffffff !important;
+        color: #23384E !important;
+        font-size: 16px !important;
+        transition: all 0.3s ease !important;
+      }
+      
+      /* Input field focus state */
+      .field-input:focus, .field-input.w-input:focus {
+        box-shadow: 0 0 0 3px rgba(84, 189, 129, 0.2) !important;
         border-color: #54BD81 !important;
+        outline: none !important;
       }
       
-      /* Image glow effect */
-      img:hover {
-        filter: drop-shadow(0 0 20px rgba(240, 69, 69, 0.7));
-        transition: filter 0.3s ease;
+      /* Field titles */
+      .field-title {
+        color: #23384E !important;
+        font-weight: 600 !important;
+        margin-bottom: 8px !important;
+        font-size: 14px !important;
       }
       
-      /* Card/section glow */
-      .module, .section {
-        transition: box-shadow 0.3s ease;
-      }
-      
-      .module:hover, .section:hover {
-        box-shadow: 0 0 25px rgba(84, 189, 129, 0.2) !important;
+      /* Textarea specific */
+      textarea.field-input {
+        min-height: 120px !important;
+        resize: vertical !important;
       }
       
       /* Footer white background with dark navy text */
@@ -2462,8 +2476,8 @@
               <div class="container-small">
                 <div class="v-flex-centered">
                   <div class="text-center w-full mx-auto">
-                    <p class="text-black font-bold text-4xl">Get Your Personalized Quote!</p>
-                    <p class="text-center w-full text-black">Once submitted, one of our team members will get back to you within <strong>24 hours</strong> to discuss your Inquiry! </p>
+                    <p class=" text-4xl lg:text-5xl mb-4" style="color: #23384E;">Get Your Personalized Quote!</p>
+                    <p class="text-center w-full" style="color: #23384E;">Once submitted, one of our team members will get back to you within <strong>24 hours</strong> to discuss your Inquiry! </p>
                   </div>
                   <div class="form-block-2 w-form">
                     <form id="wf-form-Austin-Ceramic-Coating-Inquiry" name="wf-form-Austin-Ceramic-Coating-Inquiry" data-name="Austin Ceramic Coating Inquiry" method="get" class="form-5" data-wf-page-id="6704ca9be183c1354850b076" data-wf-element-id="ccd9eb93-85e1-76ce-9496-91feb556fb43">
