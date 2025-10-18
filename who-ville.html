@@ -82,6 +82,144 @@
         color: #ffffff !important;
       }
       
+      /* Navbar styling - White background with shadow */
+      #header {
+        background-color: #ffffff !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+      }
+      
+      #header > div {
+        background-color: #ffffff !important;
+      }
+      
+      /* Body background - white to prevent black showing through dropdown */
+      body {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+      }
+      
+      /* Fix the black ::before pseudo-element on dropdown */
+      .nav-primary .sub-menu::before,
+      .nav-primary .sub-menu:before,
+      #header .nav-primary .sub-menu::before,
+      #header .nav-primary .sub-menu:before {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+      }
+      
+      #header a[href^="tel:"] {
+        color: #F04545 !important;
+        text-shadow: 0 0 10px rgba(240, 69, 69, 0.3);
+      }
+      
+      /* Logo color */
+      #header .brand svg {
+        color: #000000 !important;
+      }
+      
+      /* Nav links - black text on white background */
+      #header .nav a,
+      #header nav a {
+        color: #000000 !important;
+        transition: all 0.3s ease;
+      }
+      
+      #header .nav a:hover,
+      #header nav a:hover {
+        color: #F04545 !important;
+        text-shadow: 0 0 10px rgba(240, 69, 69, 0.5);
+      }
+      
+      /* Products menu item and dropdown styling */
+      #header .nav .js-opener,
+      #header nav .js-opener,
+      #header .menu-item-has-children > span {
+        color: #000000 !important;
+        transition: all 0.3s ease;
+      }
+      
+      #header .nav .js-opener:hover,
+      #header nav .js-opener:hover,
+      #header .menu-item-has-children:hover > span {
+        color: #F04545 !important;
+        text-shadow: 0 0 10px rgba(240, 69, 69, 0.5);
+      }
+      
+      /* Chevron icon - green */
+      #header .icon-chevron-bottom,
+      #header svg.icon-chevron-bottom {
+        color: #54BD81 !important;
+      }
+      
+      /* Gold elements in dropdown - change to red */
+      #header .text-gold,
+      #header .icon-arrow-right-thick {
+        color: #F04545 !important;
+      }
+      
+      /* Dropdown menu - white background - comprehensive override */
+      #header .sub-menu,
+      #header .sub-menu *,
+      #header .sub-menu > div,
+      #header .sub-menu > div > div,
+      #header .sub-menu .relative,
+      #header .sub-menu .pt-4,
+      #header .sub-menu .lg\\:flex,
+      #header .sub-menu__section,
+      #header .sub-menu div,
+      #header .nav .sub-menu,
+      #header .nav .sub-menu *,
+      #header nav .sub-menu,
+      #header nav .sub-menu *,
+      #header .menu-item-has-children .sub-menu,
+      #header .menu-item-has-children .sub-menu *,
+      #header li:hover .sub-menu,
+      #header li:hover .sub-menu *,
+      #header .hover-intent .sub-menu,
+      #header .hover-intent .sub-menu * {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+      }
+      
+      /* Override any bg-header or similar classes within dropdown */
+      #header .sub-menu [class*="bg-"],
+      #header .sub-menu .relative {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+      }
+      
+      /* Force white on all divs inside submenu regardless of tailwind classes */
+      #header .sub-menu div[class*="pt-"],
+      #header .sub-menu div[class*="lg:"],
+      #header .sub-menu div[class*="md:"],
+      #header .sub-menu .cm {
+        background-color: #ffffff !important;
+        background: #ffffff !important;
+      }
+      
+      /* Dropdown menu links - black text */
+      #header .sub-menu a,
+      #header .sub-menu em,
+      #header .sub-menu li a,
+      #header .sub-menu span:not(.text-neutral-500) {
+        color: #000000 !important;
+      }
+      
+      #header .sub-menu a:hover,
+      #header .sub-menu a:hover em,
+      #header .sub-menu li a:hover {
+        color: #F04545 !important;
+      }
+      
+      #header .sub-menu a:hover .icon-arrow-right-thick {
+        color: #F04545 !important;
+      }
+      
+      /* Dropdown description text */
+      #header .sub-menu span.text-neutral-500 {
+        color: #666666 !important;
+      }
+      
       /* Add glow to headings */
       h1, h2, h3 {
         text-shadow: 0 0 15px rgba(84, 189, 129, 0.3);
@@ -1568,8 +1706,8 @@
                       <div>
                         <div class="b-hero-header__content cm checked-list-wrap ">
                           <p class="text-label">CHRISTMAS LIGHT INSTALLERS</p>
-                          <h1>#1 TRUSTED <span style="color: #F04545; text-shadow: 0 0 20px rgba(240, 69, 69, 0.6);">CHRISTMAS</span> LIGHT INSTALLATIONS In <span style="color: #54BD81; text-shadow: 0 0 20px rgba(84, 189, 129, 0.6);">Fresno & Clovis</span>, Ca</h1>
-                          <p>Transform your property into a <span style="color: #F04545; font-weight: 600;">timeless holiday experience</span> with our simple or full-service, <span style="color: #54BD81; font-weight: 600;">high-end light leasing</span> options.</p>
+                          <h1>#1 TRUSTED <span style="color: #F04545; text-shadow: 0 0 20px rgba(240, 69, 69, 0.6);">CHRISTMAS LIGHT</span> INSTALLATIONS In Fresno & Clovis, Ca</h1>
+                          <p>Transform your property into a <span style="color: #F04545; text-shadow: 0 0 20px rgba(240, 69, 69, 0.6);">timeless holiday</span> experience with our simple or full-service, high-end light leasing options.</p>
                         </div>
                         <div class="mt-8 md:mt-10 tablet:flex tablet:justify-center">
                           <ul class="p-button-group m-0 gap-4 md:flex md:items-center">
