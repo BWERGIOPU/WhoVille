@@ -349,6 +349,53 @@
         color: #54BD81 !important;
         text-shadow: 0 0 20px rgba(84, 189, 129, 0.6) !important;
       }
+      
+      /* Hero section adjustments - move image up to align with title and make it bigger */
+      .module--hero_header.module--count-1 .b-hero-header__wrap {
+        gap: 1.5rem !important;
+        align-items: flex-start !important;
+      }
+      
+      .module--hero_header.module--count-1 .b-hero-header__content-wrap {
+        padding-bottom: 0 !important;
+        justify-content: flex-start !important;
+      }
+      
+      .module--hero_header.module--count-1 .b-hero-header__illustration-wrap {
+        transform: scale(1.35) !important;
+        transform-origin: center top !important;
+        margin-left: -3rem !important;
+        margin-top: 0 !important;
+        align-self: flex-start !important;
+        padding-top: 0 !important;
+      }
+      
+      .module--hero_header.module--count-1 .b-hero-header__illustration-wrap img {
+        border-radius: 1rem !important;
+      }
+      
+      /* Adjust the content to align better with the image */
+      .module--hero_header.module--count-1 .b-hero-header__content {
+        margin-top: 0 !important;
+      }
+      
+      /* Prevent overflow cutting off the image */
+      .module--hero_header.module--count-1 .b-hero-header {
+        overflow: visible !important;
+      }
+      
+      @media (max-width: 1023px) {
+        .module--hero_header.module--count-1 .b-hero-header__wrap {
+          gap: 0 !important;
+          align-items: stretch !important;
+        }
+        
+        .module--hero_header.module--count-1 .b-hero-header__illustration-wrap {
+          transform: scale(1.15) !important;
+          margin-left: 0 !important;
+          margin-top: -1rem !important;
+        }
+      }
     </style>
     
     <style>
