@@ -2955,9 +2955,9 @@
           submitButton.disabled = true;
           
           try {
-            // Replace with your AWS server IP when ready
+            // AWS Server IP: 52.53.124.180
             // For local testing: 'http://localhost:3000/christmas-lights-quote'
-            const response = await fetch('YOUR_AWS_SERVER_IP/christmas-lights-quote', {
+            const response = await fetch('http://52.53.124.180:3000/christmas-lights-quote', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
