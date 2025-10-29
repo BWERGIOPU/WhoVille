@@ -2929,4 +2929,74 @@
   <div class="glasp-extension" style="display: block; width: unset; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; bottom: 16px; right: 16px; z-index: 9999;">
     <div class="glasp-extension" style="font-family: inherit;"></div>
   </div>
+  
+  <script>
+    // Christmas Lights Quote Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('wf-form-Austin-Ceramic-Coating-Inquiry');
+      const formDone = form.parentElement.querySelector('.w-form-done');
+      const formFail = form.parentElement.querySelector('.w-form-fail');
+      
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          // Get form values
+          const name = document.getElementById('Name-5').value;
+          const phone = document.getElementById('Phone-Number').value;
+          const address = document.getElementById('Year-Make-Model').value;
+          const appointmentDate = document.getElementById('Appointment-Date').value;
+          const services = document.getElementById('Notes').value;
+          
+          // Show loading state
+          const submitButton = form.querySelector('input[type="submit"]');
+          const originalButtonText = submitButton.value;
+          submitButton.value = 'Sending...';
+          submitButton.disabled = true;
+          
+          try {
+            // Replace with your AWS server IP when ready
+            // For local testing: 'http://localhost:3000/christmas-lights-quote'
+            const response = await fetch('YOUR_AWS_SERVER_IP/christmas-lights-quote', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                name: name,
+                phone: phone,
+                address: address,
+                appointmentDate: appointmentDate,
+                services: services
+              })
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+              // Hide form and show success message
+              form.style.display = 'none';
+              formDone.style.display = 'block';
+              formFail.style.display = 'none';
+              
+              // Reset form
+              form.reset();
+            } else {
+              throw new Error(data.message || 'Failed to submit');
+            }
+          } catch (error) {
+            console.error('Error submitting form:', error);
+            
+            // Show error message
+            formDone.style.display = 'none';
+            formFail.style.display = 'block';
+            
+            // Re-enable button
+            submitButton.value = originalButtonText;
+            submitButton.disabled = false;
+          }
+        });
+      }
+    });
+  </script>
 </html>
