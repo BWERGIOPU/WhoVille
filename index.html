@@ -396,6 +396,25 @@
           margin-top: -1rem !important;
         }
       }
+      
+      /* Uniform height for all non-hero images */
+      .module--hero_header:not(.module--count-1) .b-hero-header__illustration-wrap img {
+        height: 350px !important;
+        object-fit: cover !important;
+        width: 100% !important;
+      }
+      
+      @media (max-width: 1023px) {
+        .module--hero_header:not(.module--count-1) .b-hero-header__illustration-wrap img {
+          height: 300px !important;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        .module--hero_header:not(.module--count-1) .b-hero-header__illustration-wrap img {
+          height: 250px !important;
+        }
+      }
     </style>
     
     <style>
@@ -1910,7 +1929,7 @@
                     <div class="b-hero-header__illustration-wrap b-hero-header__illustration-wrap--centered lg:w-1/2 lg:flex relative lg:flex-col lg:justify-center  mdd:px-6 tablet:px-row-1  lg:px-row-1 rounded-2xl overflow-hidden">
                       <div class="">
                         <div class="relative overflow-hidden rounded-2xl">
-                          <img width="1029" height="944" src="./whoville/real-estate-website-design-min.avif" class="w-full block" alt="" sizes="(max-width: 1024px) 100vw, 38vw" decoding="async" srcset="./assets/3.jpg">
+                          <img width="1200" height="1101" src="./whoville/real-estate-website-design-min.avif" class="w-full block" alt="" sizes="(max-width: 1024px) 100vw, 38vw" decoding="async" srcset="./assets/3.jpg">
                         </div>
                       </div>
                     </div>
