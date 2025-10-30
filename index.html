@@ -404,6 +404,11 @@
         width: 100% !important;
       }
       
+      /* Hide Schedule Online button on desktop, only show on mobile */
+      .btn--small.ml-6 {
+        display: none !important;
+      }
+      
       @media (max-width: 1023px) {
         .module--hero_header:not(.module--count-1) .b-hero-header__illustration-wrap img {
           height: 300px !important;
@@ -413,6 +418,14 @@
       @media (max-width: 767px) {
         .module--hero_header:not(.module--count-1) .b-hero-header__illustration-wrap img {
           height: 250px !important;
+        }
+        
+        /* Show and style Schedule Online button on mobile */
+        .btn--small.ml-6 {
+          display: inline-block !important;
+          padding: 8px 16px !important;
+          font-size: 12px !important;
+          margin-left: 8px !important;
         }
       }
       
@@ -1768,9 +1781,7 @@
                   <a href="#contact-us" class="btn btn--small btn--gold btn--base"> Get started </a>
                 </li>
               </ul>
-              <a href="https://www.luxurypresence.com/real-estate-website-design/#" class="ml-6 menu-opener lg:hidden">
-                <span></span>
-              </a>
+              <a href="https://www.luxurypresence.com/get-started/" class="btn btn--small btn--secondary ml-6"> Schedule Online </a>
             </div>
           </div>
         </header>
