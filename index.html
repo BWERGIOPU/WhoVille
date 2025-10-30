@@ -2929,13 +2929,8 @@
             const data = await response.json();
             
             if (data.success) {
-              // Hide form and show success message
-              form.style.display = 'none';
-              formDone.style.display = 'block';
-              formFail.style.display = 'none';
-              
-              // Reset form
-              form.reset();
+              // Redirect to Calendly
+              window.location.href = 'https://calendly.com/thechristmaslightrentalco/inquiry';
             } else {
               throw new Error(data.message || 'Failed to submit');
             }
